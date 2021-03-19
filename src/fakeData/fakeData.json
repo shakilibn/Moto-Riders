@@ -3,14 +3,14 @@
     {
         "id":1,
         "name":"bike",
-        "photo":"https://www.pinclipart.com/picdir/middle/155-1554106_motorcycle-cartoon-motorbike-png-image-harley-davidson-clipart.png",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKnL8TPpx--XGg9jsnSJV8yGHS4TtWwP8wMe10jB2IVmQl8mO5KDi-9nXaLnNIAh0pnkY&usqp=CAU",
         "seat" : 4,
         "price" : 70
     },
     {
         "id":2,
         "name":"car",
-        "photo":"https://banner2.cleanpng.com/20180705/xpw/kisspng-car-motor-vehicle-automotive-design-care-workers-5b3e9aca139b28.9434235215308295140803.jpg",
+        "photo":"https://p.kindpng.com/picc/s/210-2104344_car-vector-car-illustrator-car-renault-modeller-hd.png",
         "seat" : 4,
         "price" : 67
     },
@@ -24,8 +24,8 @@
     {
         "id":4,
         "name":"train",
-        "photo":"https://w7.pngwing.com/pngs/956/1017/png-transparent-white-and-red-strain-illustration-train-rail-transport-tram-bullet-train-s-mode-of-transport-public-transport-train-station.png",
-        "seat" : 4,
+        "photo":"https://www.clipartkey.com/mpngs/m/217-2171162_bullet-train-png-pic-high-speed-train-png.png",
+        "seat" : 10,
         "price" : 40
     }
 ]

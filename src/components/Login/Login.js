@@ -16,6 +16,7 @@ if (!firebase.apps.length) {
 const Login = () => {
     const [newUser, setNewUser] = useState(true);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [firstPassword, setFirstPassword] = useState();
 
     let history = useHistory();
     let location = useLocation();
@@ -31,6 +32,7 @@ const Login = () => {
             const passwordHasNumber = /\d/.test(e.target.value);
             isFieldValid = isPasswordValid && passwordHasNumber;
         }
+        
         if (isFieldValid) {
             const newUserInfo = { ...loggedInUser };
             newUserInfo[e.target.name] = e.target.value;
