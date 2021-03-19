@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './RiderDetails.css';
 import Riders from '../../fakeData/fakeData.json';
 import SearchFound from '../SearchFound/SearchFound';
+import SearchMap from '../SearchMap/SearchMap';
 
 const RiderDetails = () => {
     const [search, setSearch] = useState(false);
@@ -44,7 +45,7 @@ const RiderDetails = () => {
                 </div>
             </div>
             <div className="col-md-8">
-                <h2>right side</h2>
+                <SearchMap></SearchMap>
             </div>
         </div>
     );

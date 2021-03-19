@@ -8,9 +8,9 @@ const Header = () => {
     return (
         <div>
             <Navbar className="d-flex justify-content-between" bg="primary" variant="dark">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/home">Moto Riders</Navbar.Brand>
                 <div>
-                    <Nav className="mr-auto">
+                    <Nav className="mr-auto d-flex align-items-center">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/destination">Destination</Nav.Link>
                         <Nav.Link as={Link} to="/blog">Blog</Nav.Link>

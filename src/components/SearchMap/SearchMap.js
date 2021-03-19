@@ -1,9 +1,10 @@
 import React from 'react';
+import map from '../../images/Map.png'
 
 const SearchMap = () => {
     return (
         <div>
-            <h1>Search Map</h1>
+            <img className="img-fluid" src={map} alt=""/>
         </div>
     );
 };
