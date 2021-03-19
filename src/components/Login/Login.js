@@ -15,7 +15,7 @@ if (!firebase.apps.length) {
 
 const Login = () => {
     const [newUser, setNewUser] = useState(true);
-    const[loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     let history = useHistory();
     let location = useLocation();
@@ -46,11 +46,11 @@ const Login = () => {
             .signInWithPopup(provider)
             .then((result) => {
                 var user = result.user;
-                const {displayName, email} = user;
-                const newUserInfo = {...loggedInUser};
+                const { displayName, email } = user;
+                const newUserInfo = { ...loggedInUser };
                 newUserInfo.isSignedIn = true;
                 newUserInfo.name = displayName;
-                newUserInfo.email = email;                
+                newUserInfo.email = email;
                 setLoggedInUser(newUserInfo);
                 history.replace(from);
             })
@@ -67,8 +67,8 @@ const Login = () => {
             .signInWithPopup(provider)
             .then((result) => {
                 const user = result.user;
-                const {displayName, email} = user;
-                const newUserInfo = {...loggedInUser};
+                const { displayName, email } = user;
+                const newUserInfo = { ...loggedInUser };
                 newUserInfo.isSignedIn = true;
                 newUserInfo.name = displayName;
                 newUserInfo.email = email;
@@ -90,6 +90,7 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setLoggedInUser(newUserInfo);
+                    updateUserInfo(loggedInUser.name);
                 })
                 .catch((error) => {
                     const newUserInfo = { ...loggedInUser };
@@ -103,8 +104,8 @@ const Login = () => {
                 .then((userCredential) => {
                     const user = userCredential.user;
 
-                    const {displayName, email} = user;
-                    const newUserInfo = {...loggedInUser};
+                    const { displayName, email } = user;
+                    const newUserInfo = { ...loggedInUser };
                     newUserInfo.isSignedIn = true;
                     newUserInfo.name = displayName;
                     newUserInfo.email = email;
@@ -122,7 +123,19 @@ const Login = () => {
                 });
         }
     }
-    
+
+    const updateUserInfo = name => {
+        const user = firebase.auth().currentUser;
+
+        user.updateProfile({
+            displayName: name
+        }).then(() => {
+            console.log("user name updated successfully");
+        }).catch((error) =>{
+            console.log(error);
+        });
+    }
+
 
     return (
         <div className="d-flex justify-content-center mt-5 p-5">
@@ -150,9 +163,6 @@ const Login = () => {
                 <div className="social-site-area text-center m-3">
                     <Button className="mb-2" onClick={handleFacebookSignIn} variant="primary" size="lg" block>Continue with Facebook</Button>
                     <Button onClick={handleGoogleSignIn} variant="primary" size="lg" block>Continue with Google</Button><br />
-                    
-                    <p>name {loggedInUser.name}</p>
-                    <p>email {loggedInUser.email}</p>
                 </div>
             </div>
         </div>
