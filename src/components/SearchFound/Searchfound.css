@@ -1,0 +1,15 @@
+.search-result img {
+    height:25px;
+}
+.search-result {
+    background-color: white;
+    margin:5px 0px;
+    padding:5px;
+    border-radius:5px;
+}
+.search-destination {
+    margin:5px 0px;
+    padding:10px;
+    color:white;
+    border-radius:5px;
+}

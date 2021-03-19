@@ -1,0 +1,31 @@
+
+[
+    {
+        "id":1,
+        "name":"bike",
+        "photo":"https://www.pinclipart.com/picdir/middle/155-1554106_motorcycle-cartoon-motorbike-png-image-harley-davidson-clipart.png",
+        "seat" : 4,
+        "price" : 70
+    },
+    {
+        "id":2,
+        "name":"car",
+        "photo":"https://banner2.cleanpng.com/20180705/xpw/kisspng-car-motor-vehicle-automotive-design-care-workers-5b3e9aca139b28.9434235215308295140803.jpg",
+        "seat" : 4,
+        "price" : 67
+    },
+    {
+        "id":3,
+        "name":"bus",
+        "photo":"https://i.vippng.com/png/small/70-706793_greyhound-bus-png-tour-bus-clip-art.png",
+        "seat" : 4,
+        "price" : 50
+    },
+    {
+        "id":4,
+        "name":"train",
+        "photo":"https://w7.pngwing.com/pngs/956/1017/png-transparent-white-and-red-strain-illustration-train-rail-transport-tram-bullet-train-s-mode-of-transport-public-transport-train-station.png",
+        "seat" : 4,
+        "price" : 40
+    }
+]
