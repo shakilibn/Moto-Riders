@@ -35,9 +35,9 @@ const RiderDetails = () => {
                             </div> :
                             <div className="before-search">
                                 <p>From</p>
-                                <input className="form-control" onBlur={handleBlur} type="text" name="from" placeholder="Dhanmondi" />
+                                <input className="form-control" onBlur={handleBlur} type="text" name="from" placeholder="From" />
                                 <p className="mt-4">To</p>
-                                <input className="form-control" onBlur={handleBlur} type="text" name="to" id="" placeholder="mirpur" />
+                                <input className="form-control" onBlur={handleBlur} type="text" name="to" id="" placeholder="To" />
                                 <br />
                                 <Button onClick={() => setSearch(true)} className="text-white" size="lg" block>Search</Button>
                             </div>

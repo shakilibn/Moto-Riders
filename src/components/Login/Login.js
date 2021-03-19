@@ -131,7 +131,7 @@ const Login = () => {
             displayName: name
         }).then(() => {
             console.log("user name updated successfully");
-        }).catch((error) =>{
+        }).catch((error) => {
             console.log(error);
         });
     }
