@@ -6,9 +6,12 @@ body {
     background-attachment: fixed;
     min-height:800px;
 }
-.main-container {
+.card-container {
     display:flex;
     align-items:center;
     justify-content: center;
-    min-height: 700px;
+    min-height: 400px;
+}
+.heading-container {
+    padding:100px 100px 0 100px;
 }

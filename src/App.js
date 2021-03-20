@@ -65,7 +65,7 @@ function App() {
           <NoMatch />
         </Route>
 
-      </Switch>      
+      </Switch> 
     </Router>
     </UserContext.Provider>
   );
