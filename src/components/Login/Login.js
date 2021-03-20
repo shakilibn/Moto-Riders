@@ -16,7 +16,6 @@ if (!firebase.apps.length) {
 const Login = () => {
     const [newUser, setNewUser] = useState(true);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [firstPassword, setFirstPassword] = useState();
 
     let history = useHistory();
     let location = useLocation();
@@ -105,7 +104,6 @@ const Login = () => {
             firebase.auth().signInWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
                 .then((userCredential) => {
                     const user = userCredential.user;
-
                     const { displayName, email } = user;
                     const newUserInfo = { ...loggedInUser };
                     newUserInfo.isSignedIn = true;
@@ -114,7 +112,6 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setLoggedInUser(newUserInfo);
-                    console.log(newUserInfo);
                     history.replace(from);
                 })
                 .catch((error) => {
@@ -144,7 +141,7 @@ const Login = () => {
             <div className="input-area">
                 <div className="login-card p-5">
                     <p style={{ color: 'red' }}>{loggedInUser.error}</p>
-                    {loggedInUser.success && <p style={{ color: 'green' }}>User {newUser ? "Created" : "Logged In"} Successfully</p>}
+                    {loggedInUser.success && <p style={{ color: 'green' }}>{newUser && "User Created Successfully"}</p>}
                     {newUser ? <h2 className="mb-5">Create an account</h2> : <h2 className="mb-5">Login</h2>}
 
                     <form onSubmit={handleSubmit}>

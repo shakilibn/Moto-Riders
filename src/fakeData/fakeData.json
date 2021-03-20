@@ -2,28 +2,28 @@
 [
     {
         "id":1,
-        "name":"bike",
+        "name":"Bike",
         "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKnL8TPpx--XGg9jsnSJV8yGHS4TtWwP8wMe10jB2IVmQl8mO5KDi-9nXaLnNIAh0pnkY&usqp=CAU",
         "seat" : 4,
         "price" : 70
     },
     {
         "id":2,
-        "name":"car",
+        "name":"Car",
         "photo":"https://p.kindpng.com/picc/s/210-2104344_car-vector-car-illustrator-car-renault-modeller-hd.png",
         "seat" : 4,
         "price" : 67
     },
     {
         "id":3,
-        "name":"bus",
+        "name":"Bus",
         "photo":"https://i.vippng.com/png/small/70-706793_greyhound-bus-png-tour-bus-clip-art.png",
         "seat" : 4,
         "price" : 50
     },
     {
         "id":4,
-        "name":"train",
+        "name":"Metro",
         "photo":"https://www.clipartkey.com/mpngs/m/217-2171162_bullet-train-png-pic-high-speed-train-png.png",
         "seat" : 10,
         "price" : 40
