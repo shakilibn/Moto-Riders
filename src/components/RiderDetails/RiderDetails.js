@@ -31,7 +31,7 @@ const RiderDetails = () => {
                             <div className="after-search">
                                 <h4 className="mb-4 text-center">Your Search Result</h4>
                                 <div className="bg-primary search-destination">
-                                    <p className="text-center">{destination.date}</p>
+                                    <p>Date : {destination.date}</p>
                                     <p><FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" /> {destination.from} To {destination.to}</p>
                                     {/* <p><FontAwesomeIcon icon={faMapMarkerAlt} /> {destination.to}</p> */}
                                 </div>
