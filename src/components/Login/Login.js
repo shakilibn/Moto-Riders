@@ -157,7 +157,8 @@ const Login = () => {
                         {/* <input type="password" onBlur={handleBlur} name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" />
                     <br /> */}
 
-                        <input className="mb-3" type="submit" value={newUser ? "Create an account" : "Login"} />
+                        {/* <input className="mb-3" type="submit" value={newUser ? "Create an account" : "Login"} /><br /> */}
+                        <Button type="submit" block>{newUser ? "Create an account" : "Login"}</Button>
                         <br />
                         <p>{newUser ? "Already" : "Don't"} have an account ? <Link onClick={() => setNewUser(!newUser)}>{newUser ? "Login" : "Create an account"}</Link></p>
                     </form>

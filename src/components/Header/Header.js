@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
+import './Header.css'
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     return (
         <div>
-            <Navbar className="d-flex justify-content-between" bg="primary" variant="dark" expand="lg">
-                <Navbar.Brand as={Link} to="/home">Moto Riders</Navbar.Brand>
+            <Navbar className="d-flex justify-content-between menu-bar" bg="primary" variant="dark" expand="lg">
+                <Navbar.Brand as={Link} to="/home"><strong>Moto Riders</strong></Navbar.Brand>
                 <div>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
