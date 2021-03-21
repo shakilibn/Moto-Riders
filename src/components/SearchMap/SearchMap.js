@@ -13,7 +13,7 @@
 // export default SearchMap;
 
 import React, { Component } from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './SearchMap.css'
 
 class SearchMap extends Component {
@@ -22,17 +22,18 @@ class SearchMap extends Component {
             position: 'relative',
             width: '100%',
             height: '600px'
-          }
+        }
         return (
             <div className="mt-2 map-container">
-                <Map style={containerStyle} google={this.props.google} zoom={14}>
+                <Map style={containerStyle} google={this.props.google} center={{
+                    lat: 27.914700,
+                    lng: 79.656502
+                    }} zoom={14}
+                >
 
                     <Marker onClick={this.onMarkerClick}
                         name={'Current location'} />
 
-                    <InfoWindow onClose={this.onInfoWindowClose}>
-                        
-                    </InfoWindow>
                 </Map>
             </div>
         );
@@ -43,4 +44,4 @@ class SearchMap extends Component {
 
 export default GoogleApiWrapper({
     apiKey: ("AIzaSyDa24JhGbTIamrEbdha0x3IcDI0J7ylH7Y")
-  })(SearchMap)
+})(SearchMap)

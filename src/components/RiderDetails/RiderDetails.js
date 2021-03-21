@@ -4,7 +4,6 @@ import './RiderDetails.css';
 import Riders from '../../fakeData/fakeData.json';
 import SearchFound from '../SearchFound/SearchFound';
 import SearchMap from '../SearchMap/SearchMap';
-import Footer from '../Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -33,7 +32,6 @@ const RiderDetails = () => {
                                 <div className="bg-primary search-destination">
                                     <p>Date : {destination.date}</p>
                                     <p><FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" /> {destination.from} To {destination.to}</p>
-                                    {/* <p><FontAwesomeIcon icon={faMapMarkerAlt} /> {destination.to}</p> */}
                                 </div>
                                 {
                                     Riders.map(rider => <SearchFound></SearchFound>)
